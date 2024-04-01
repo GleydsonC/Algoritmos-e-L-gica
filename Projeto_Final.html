@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      alert("Sua jornada começou")
+
+      let player = prompt("Qual o nome do seu personagem? ");
+      let vida = prompt("Você tem 20 pontos para distribuir entre vida e ataque. Quantos pontos de vida você quer?");
+      let ataque = prompt("Quantos pontos de ataque você tem?");
+      let hp = vida * 100;
+      let dano = ataque * 10;
+      let hpAtual
+      
+
+      alert("Você entrou em uma caverna a procura de um tesouro. Ache o tesouro e vença!!!")
+
+      let acao1 = prompt("Você avança em linha reta até chegar a uma bifucação. A = Ir para a esquerda, B = Ir para a Direira")
+      if(acao1 == "a") {
+        alert("Você foi pego em uma armadilha, o chão se abriu e espinhos machucaram seus pés. Menos 200 de hp. Após o ocorrido você voltou e foi pelo caminho da direita")
+        hpAtual = hp - 200
+        alert("Agora seu hp é de:")
+      } else if(acao1 == "b"){
+        alert("Você seguiu pelo caminho sem nenhum problema")
+
+      }
+
+      alert("Um Ogro aparece em sua frente ")
+
+      let acao2 = prompt("Você pode tentar lutar(A) ou passar correndo(B)")
+      if(acao2 == "a") {
+        if(dano > 50){
+          alert("Você venceu")
+        } else if(dano < 50){
+         alert("Você perdeu 400 de hp. O Ogro ficou entediado e resolveu ir embora")
+         hpAtual = hpAtual - 400
+        }
+      }else if (acao2 == "b"){
+        alert("Você consegue fugir")
+
+      }
+
+      let acao3 = prompt("Você chega a sala do tesouro. Tem dois baús, qual deseja abrir? A ou B?")
+      if(acao3 == "a"){
+        alert("KABUMMMMMMMMM. Você morreu na explosão.")
+      }else if(acao3 == "b"){
+        alert("Você venceu!!!!")
+      }
+
+    </script>
+  </head>
+  <body></body>
+</html>
